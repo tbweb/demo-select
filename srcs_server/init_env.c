@@ -4,7 +4,6 @@ static void		init_fd(t_fd *fd)
 {
 	fd->type = FD_FREE;
 	fd->channel = 0;
-	ft_bzero(fd->buf_read, BUF_SIZE + 1);
 	ft_bzero(fd->buf_write, BUF_SIZE + 1);
 	fd->fct_read = NULL;
 	fd->fct_write = NULL;

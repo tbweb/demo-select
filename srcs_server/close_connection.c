@@ -4,7 +4,7 @@ static void	clean_fd(t_fd *fd)
 {
 	fd->type = FD_FREE;
 	fd->channel = 0;
-	ft_bzero(fd->buf_read, BUF_SIZE);
+	fd->buf_read = NULL;
 	ft_bzero(fd->buf_write, BUF_SIZE);
 	fd->fct_read = NULL;
 	fd->fct_write = NULL;

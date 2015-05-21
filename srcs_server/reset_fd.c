@@ -12,7 +12,6 @@ void	reset_fd(t_env *e)
 	{
 		if (e->fds[i].type != FD_FREE)
 		{
-			ft_bzero(e->fds[i].buf_read, BUF_SIZE);
 			FD_SET(i, &e->fd_read);
 			if (ft_strlen(e->fds[i].buf_write) > 0)
 			{

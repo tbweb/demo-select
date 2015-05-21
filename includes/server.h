@@ -36,7 +36,7 @@ typedef struct	s_fd
 	int			type;
 	void		(*fct_read)();
 	void		(*fct_write)();
-	char		buf_read[BUF_SIZE + 1];
+	char		*buf_read;
 	char		buf_write[BUF_SIZE + 1];
 }				t_fd;
 
