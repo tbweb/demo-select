@@ -25,7 +25,14 @@ SRCSER		=	server.c \
 				srv_accept.c \
 				srv_create.c
 
-SRCCLI		=	client.c
+SRCCLI		=	client.c \
+				usage.c \
+				init_client.c \
+				main_loop.c \
+				init_fd.c \
+				check_fd.c \
+				read_fd.c \
+				read_stdin.c
 
 INCLUDES	=	-I$(INCDIR)
 LIBFT		=	-L$(LIBDIR) -lft

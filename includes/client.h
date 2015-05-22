@@ -13,6 +13,9 @@
 #ifndef CLIENT_H
 # define CLIENT_H
 
+# include <stdlib.h>
+# include <sys/socket.h>
+# include <netdb.h>
 # include <sys/types.h>
 # include "../libft/includes/libft.h"
 
@@ -33,5 +36,14 @@ typedef struct	s_env
 	fd_set		fd_read;
 	fd_set		fd_write;
 }				t_env;
+
+void			usage(char *str);
+void			init_client(int ac, char **av, t_env *e);
+void			main_loop(t_env *e);
+void			init_fd(t_env *e);
+int				check_fd(t_env *e);
+int				read_fd(t_env *e);
+void			read_stdin(t_env *e);
+void			init_client(int ac, char **av, t_env *e);
 
 #endif
